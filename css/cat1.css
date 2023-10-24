@@ -21,6 +21,6 @@ ul, li {
     display : none;
 }
 
-.titreLi:hover {
+#titreLi:hover, #voir:hover {
     cursor: pointer;
 }

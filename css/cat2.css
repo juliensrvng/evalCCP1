@@ -4,7 +4,7 @@ button {
     background-color: #ced4da;
 }
 
-a {
+button a {
     text-decoration: none;
     color : #000000;
 }
@@ -19,4 +19,8 @@ ul, li {
 
 .off {
     display : none;
+}
+
+#titreLi:hover, #voir:hover {
+    cursor: pointer;
 }
