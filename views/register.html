@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>S'inscrire</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/register.css">
 
 </head>
+
 <body>
-    
+    <div class="bgImg">
+        <div class="container">
+            <form id="signup" class="form rounded">
+                <h1>Inscription</h1>
+                <div class="form-field error success">
+                    <label for="username">Nom : </label>
+                    <input type="text" name="username" id="username" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="prenom">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" autocomplete="off">
+                    <small class="conditionMdp">Le mot de passe doit avoir au moins 8 caractères, il doit comporter une
+                        minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants : #+-^[]</small>
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="confirm-password">Confirmation du mot de passe</label>
+                    <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <input type="submit" value="S'inscrire" class="btn">
+                </div>
+                <div class="form-field error success">
+                    <input type="reset" value="Effacer les champs" class="btn">
+                </div>
+                <div class="">
+                    <a href="login.html">Je suis déjà inscrit</a>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
-    
+
+
+
     <script src="../javascript/register.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,26 @@
+button {
+    border : 1px solid #000000;
+    border-radius: 10px;
+    background-color: #ced4da;
+}
+
+button a {
+    text-decoration: none;
+    color : #000000;
+}
+
+img {
+    width : 25%;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.off {
+    display : none;
+}
+
+.titreLi:hover {
+    cursor: pointer;
+}
