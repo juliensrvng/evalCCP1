@@ -26,19 +26,32 @@
         </div>
         <div id="local">Évènements</div>
         <img src="../images/Wolf section-7.jpg" alt="image d'accueil" class="rounded m-5">
-        <div class="row d-flex m-3 justify-content-between">
-            <ul id="ulTopic">
-                <li class="row border-bottom"><span class="col-1">#</span><span class="col-5">Titre sujet</span><span
-                        class="col-2">Dernier commentaire</span><span class="col-3">Auteur</span></li>
-                <li class="row border-bottom"><span class="col-1" id="numLi">1</span><span class="col-5"
-                        id="titreLi">Partie du 29/10/2023</span><span class="col-2" id="commLi">24/10/2023</span><span
-                        class="col-3" id="autLi">Julien</span></li>
-                <li class="row off" id="message">
-                    <p class="col-12 text-start ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, quas a?
-                        Praesentium eaque perferendis consectetur optio nobis unde quod enim ipsam dolorum voluptatum
-                        eligendi fuga exercitationem hic, repudiandae, ipsa ad?</p>
-                </li>
-            </ul>
+        <div class="d-flex justify-content-center mb-5">
+            <table>
+                <thead>
+                    <tr class="bg-secondary-subtle">
+                        <th>#</th>
+                        <th colspan="2">Sujet</th>
+                        <th>Dernier Commentaire</th>
+                        <th>Auteur</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyTopic">
+                    <tr>
+                        <td>1</td>
+                        <td colspan="2" id="sujet" class="titreLi">Partie le 29/10/2023</td>
+                        <td>24/10/2023</td>
+                        <td>Julien</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" id="message" class="text-start off">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Fugiat
+                            illum optio natus architecto maxime voluptates aut nam deserunt quos maiores? Dolorum minus
+                            quia,
+                            sunt tenetur laboriosam quas tempore vero porro?</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div id="formTopic" class="justify-content-center row">
             <form action="" method="get" id="ajoutTopic"
@@ -47,8 +60,8 @@
                     <label for="topic" class="mt-3">Titre du sujet</label>
                     <input type="text" class=" mt-3 rounded" id="topic" name="topic" autocomplete="off"
                         placeholder="Donner un titre à votre sujet"><br>
-                    <label for="messageP" class="mt-3">Votre Message</label>
-                    <textarea class="mt-3" name="messageP" id="messageP" placeholder="Notez votre message" cols="30" rows="5"></textarea>
+                    <label for="messageTd" class="mt-3">Votre Message</label>
+                    <textarea class="mt-3" name="messageTd" id="messageTd" placeholder="Notez votre message" cols="30" rows="5"></textarea>
                     <br>
                     <input type="submit" value="Ajouter" class="my-3 rounded">
                     <input type="reset" value="Effacer le champ" class=" mb-3 rounded" id="reset">

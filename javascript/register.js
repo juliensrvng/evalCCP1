@@ -22,6 +22,11 @@ const isPasswordSecure = (password) => {
     return re.test(password);
 };
 
+const noDigit = (username) => {
+    let re = /^([a-zA-Z]){3,}$/i;
+    return re.test(username);
+};
+
 
 const showError = (input, message) => { 
     // reprendre le form-field element 
@@ -49,12 +54,13 @@ const checkUsername = () => {
     let valid = false;
     const min = 3,
         max = 25;
-    const username = usernameEl.value.trim();
-
+    const username = usernameEl.value.trim();   
     if (!isRequired(username)) {
         showError(usernameEl, 'Le champ ne peut être vide');
     } else if (!isBetween(username.length, min, max)) {
         showError(usernameEl, `Le nom doit avoir au moins ${min} caractères.`)
+    } else if (!noDigit(username)) {
+        showError(usernameEl, `Le nom ne doit pas contenir de chiffre.`)
     } else {
         showSuccess(usernameEl);
         valid = true;
@@ -73,6 +79,8 @@ const checkPrenom = () => {
         showError(prenomEl, 'Le champ ne peut être vide');
     } else if (!isBetween(prenom.length, min, max)) {
         showError(prenomEl, `Le prénom doit avoir au moins ${min} caractères.`)
+    } else if (!noDigit(prenom)) {
+        showError(prenomEl, `Le prénom ne doit pas contenir de chiffre.`)
     } else {
         showSuccess(prenomEl);
         valid = true;
