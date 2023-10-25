@@ -12,15 +12,30 @@ button a {
 img {
     width : 25%;
 }
+tr th {
+    color : #000;
+}
+table,
+td, th {
+  border: 1px solid #333;
+}
 
-ul, li {
-    list-style-type: none;
+th, td {
+    text-align: center;
 }
 
 .off {
     display : none;
 }
 
-#titreLi:hover, #voir:hover {
+table {
+    width: 75%;
+}
+
+.off {
+    display : none;
+}
+
+#titreTd:hover, #voir:hover, #sujet {
     cursor: pointer;
 }

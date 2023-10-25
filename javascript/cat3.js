@@ -14,58 +14,57 @@ let ajoutTopic = document.getElementById("ajoutTopic");
 let x = 2;
 
 ajoutTopic.addEventListener("submit", function (e) {
+    let day = new Date();
     e.preventDefault();
-    let ulTopic = document.getElementById("ulTopic");
-    let addTopic = document.createElement("li");
+    let tbodyTopic = document.getElementById("tbodyTopic");
+    let addTopic = document.createElement("tr");
     let topic = document.getElementById("topic").value;
-    let messageP = document.getElementById("messageP").value;
-    let numLi = document.createElement("span");
-    let titreLi = document.createElement("span");
-    let commLi = document.createElement("span");
-    let autLi = document.createElement("span");
-    let addMessLi = document.createElement("li");
-    let addMess = document.createElement("p");
-    titreLi.innerText = topic;
-    numLi.innerText = x++;
-    ulTopic.appendChild(addTopic);
-    addTopic.appendChild(numLi);
-    addTopic.appendChild(titreLi);
-    addTopic.appendChild(commLi);
-    addTopic.appendChild(autLi);
-    ulTopic.appendChild(addMessLi);
-    addMessLi.appendChild(addMess);
-    addMess.innerText = messageP;
-    addTopic.setAttribute("class", "row border-bottom");
-    numLi.setAttribute("class", "col-1");
-    titreLi.setAttribute("class", "col-5");
-    titreLi.setAttribute("id", "voir")
-    commLi.setAttribute("class", "col-2");
-    autLi.setAttribute("class", "col-3");
-    addMessLi.setAttribute("class", "row off");
-    addMessLi.setAttribute("id", "123456")
-    addMess.setAttribute("class", "col-12 text-start")
-    autLi.innerText = localStorage.getItem("prenom");
-    commLi.innerText = day.toLocaleDateString();
-    let voirPlus = titreLi;
+    let messageTd = document.getElementById("messageTd").value;
+    let numTd = document.createElement("td");
+    let titreTd = document.createElement("td");
+    let commTd = document.createElement("td");
+    let autTd = document.createElement("td");
+    let addMessTd = document.createElement("tr");
+    let addMess = document.createElement("td");
+    titreTd.innerText = topic;
+    numTd.innerText = x++;
+    tbodyTopic.appendChild(addTopic);
+    addTopic.appendChild(numTd);
+    addTopic.appendChild(titreTd);
+    addTopic.appendChild(commTd);
+    addTopic.appendChild(autTd);
+    tbodyTopic.appendChild(addMessTd);
+    addMessTd.appendChild(addMess);
+    addMess.innerText = messageTd;
+    titreTd.setAttribute("colspan", "2");
+    titreTd.setAttribute("id", "voir")
+    addMessTd.setAttribute("class", "off");
+    addMess.setAttribute("colspan", "6");
+    addMess.setAttribute("class", "text-start");
+    autTd.innerText = localStorage.getItem("prenom");
+    commTd.innerText = day.toLocaleDateString();
+    let voirPlus = titreTd;
     voirPlus.addEventListener("click", function (e) {
-        addMessLi.classList.toggle("off");
+        addMessTd.classList.toggle("off");
     });
     //bouton remove
     let remove = document.createElement("button");
-    addTopic.appendChild(remove);
+    let tdBtn = document.createElement("td");
+    addTopic.appendChild(tdBtn);
+    tdBtn.appendChild(remove);
     remove.innerText = "Effacer";
     remove.setAttribute("id", "remove");
-    remove.setAttribute("class", "rounded col-1");
+    remove.setAttribute("class", "rounded text-center");
     remove.addEventListener("click", function (e) {
         addTopic.remove();
         addMess.remove();
     });
 });
 
-let voirPlus = document.getElementById("titreLi")
+//bouton déroulant message
+let voirPlus = document.getElementById("sujet");
 let message = document.getElementById("message");
 
 voirPlus.addEventListener("click", function (e) {
-    let message = document.getElementById("message");
-    message.classList.toggle("off")
+    message.classList.toggle("off");
 });

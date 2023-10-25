@@ -52,7 +52,7 @@ const checkEmail = () => {
     if (!isRequired(email)) {
         showError(emailEl, 'le champ ne peut être vide');
     } else if (!isEmailValid(email)) {
-        showError(emailEl, "L'adresse mail ne peut être valide")
+        showError(emailEl, "L'adresse mail n'est pas valide")
     } else {
         showSuccess(emailEl);
         valid = true;
@@ -66,8 +66,6 @@ const checkPassword = () => {
     const password = passwordEl.value.trim();
     if (!isRequired(password)) {
         showError(passwordEl, 'le mot de passe ne peut être vide');
-    } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Le mot de passe est erroné');
     } else {
         showSuccess(passwordEl);
         valid = true;
@@ -87,8 +85,6 @@ form.addEventListener('submit', function (e) {
         let isEmailValid = checkEmail();
         let isPasswordValid = checkPassword();
         let isFormValid = 
-
-
             isEmailValid &&
             isPasswordValid ;
 
