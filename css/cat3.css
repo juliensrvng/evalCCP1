@@ -1,3 +1,7 @@
+body {
+    background-color: #000;
+}
+
 button {
     border : 1px solid #000000;
     border-radius: 10px;
@@ -12,10 +16,12 @@ button a {
 img {
     width : 25%;
 }
-
+tr th {
+    color : #000;
+}
 table,
 td, th {
-  border: 1px solid #FFF;
+  border: 1px solid #333;
 }
 
 th, td {
@@ -34,6 +40,30 @@ table {
     display : none;
 }
 
-#titreTd:hover, #voir:hover, #sujet {
+#titreTd:hover, #voir:hover, #sujet:hover , .sujet:hover{
     cursor: pointer;
+    color : #000;
+    background-color: #ced4da;
+}
+
+@media only screen and (max-width: 768px) {
+    .mx-5 {
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    #ajoutTopic {
+        flex : 0 0 auto;
+        width: 83.333333%;
+    }
+    .menu {
+        display: none;
+    }
+    .menuBurger, .on {
+        display: block;
+    }
+    
+    
+}
+#cyprian {
+    color : #FFF
 }
