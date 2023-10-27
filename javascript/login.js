@@ -22,6 +22,23 @@ const isPasswordSecure = (password) => {
     return re.test(password);
 };
 
+let showMdp = document.getElementById("showMdp");
+let hideMdp = document.getElementById("hideMdp");
+let mdp = document.getElementById("password");
+
+showMdp.addEventListener("click", function (e) {
+    e.preventDefault();
+    mdp.setAttribute("type", "text");
+    showMdp.classList.toggle("off");
+    hideMdp.classList.toggle("off");
+});
+
+hideMdp.addEventListener("click", function (e) {
+    e.preventDefault();
+    mdp.setAttribute("type", "password");
+    showMdp.classList.toggle("off");
+    hideMdp.classList.toggle("off");
+});
 
 const showError = (input, message) => { 
     // reprendre le form-field element 

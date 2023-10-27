@@ -31,7 +31,7 @@ footer {
 
 .container {
     background-color: #fff;
-    opacity: 60%;
+    opacity: 80%;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -106,4 +106,8 @@ footer {
 }
 #cyprian {
     color : #FFF
+}
+
+.off {
+    display: none;
 }
