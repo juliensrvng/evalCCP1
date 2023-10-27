@@ -22,6 +22,7 @@ a {
 }
 
 #cyprian {
+    text-decoration: underline;
     color: #FFF
 }
 
@@ -36,7 +37,10 @@ a {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-
+.cat {
+    z-index: 2;
+    opacity: 0.6;
+}
 .button-52:after, h1:after {
     content: "";
     background-color: #000000;
@@ -53,9 +57,7 @@ a {
     top: 0px;
     right: 0px;
 }
-.cat {
-    z-index: 2;
-}
+
 
 @media (min-width: 768px) {
     .button-52 {

@@ -16,12 +16,16 @@ let x = 2;
 let numTopic = 0;
 let numMess = 1000;
 ajoutTopic.addEventListener("submit", function (e) {
+    let topic = document.getElementById("topic").value;
+    let messageTd = document.getElementById("messageTd").value;
+    if (topic == "" || messageTd == "") {
+        alert("Vous devez remplir tout les champs avant d'envoyer");
+        e.preventDefault();
+    } else {
     let day = new Date();
     e.preventDefault();
     let tbodyTopic = document.getElementById("tbodyTopic");
     let addTopic = document.createElement("tr");
-    let topic = document.getElementById("topic").value;
-    let messageTd = document.getElementById("messageTd").value;
     let numTd = document.createElement("td");
     let titreTd = document.createElement("td");
     let dateTd = document.createElement("td");
@@ -86,6 +90,7 @@ ajoutTopic.addEventListener("submit", function (e) {
         addTopic.remove();
         addMessTd.remove();
     });
+}
 });
 
 //bouton déroulant message
@@ -121,4 +126,17 @@ window.onload = (e) => {
         alert("Vous devez être connecté pour accéder à cette page");
         window.location.href="login.html";
     }
-}
+};
+
+let menuBurger = document.getElementById("menuBurger");
+
+menuBurger.addEventListener("click", function(e) {
+    let menuHome = document.getElementById("menuHome");
+    menuHome.classList.toggle("on");
+    let menuCat1 = document.getElementById("menuCat1");
+    menuCat1.classList.toggle("on")
+    let menuCat2 = document.getElementById("menuCat2");
+    menuCat2.classList.toggle("on");
+    // let menuCat3 = document.getElementById("menuCat3");
+    // menuCat3.classList.toggle("on");
+})
