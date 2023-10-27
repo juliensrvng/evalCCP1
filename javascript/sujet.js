@@ -69,17 +69,19 @@ ajoutTopic.addEventListener("submit", function (e) {
 
 });
 //menu responsive
+
 let menuBurger = document.getElementById("menuBurger");
-let menuHome = document.getElementById("menuHome");
-let menuCat1 = document.getElementById("menuCat1");
-let menuCat2 = document.getElementById("menuCat2");
-let menuCat3 = document.getElementById("menuCat3");
-menuBurger.addEventListener("click", function (e) {
+
+menuBurger.addEventListener("click", function(e) {
+    let menuHome = document.getElementById("menuHome");
     menuHome.classList.toggle("on");
-    menuCat1.classList.toggle("on");
+    let menuCat1 = document.getElementById("menuCat1");
+    menuCat1.classList.toggle("on")
+    let menuCat2 = document.getElementById("menuCat2");
     menuCat2.classList.toggle("on");
+    let menuCat3 = document.getElementById("menuCat3");
     menuCat3.classList.toggle("on");
-});
+})
 //bouton logout
 let logOut = document.getElementById("logOut");
 logOut.addEventListener("click", function (e) {
@@ -93,4 +95,4 @@ window.onload = (e) => {
         alert("Vous devez être connecté pour accéder à cette page");
         window.location.href="login.html";
     }
-}
+};
