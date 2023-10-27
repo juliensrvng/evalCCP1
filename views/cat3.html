@@ -13,21 +13,21 @@
 </head>
 
 <body>
-    <header class="bg-light row p-1">
-        <div id="user" class="user col-4 text-center">Bienvenue <span id="username"></span></div>
+    <header class="bg-dark row text-light p-1">
+        <div id="user" class="user col-4 text-start">Bienvenue <span id="username"></span></div>
         <div class="date col-4 text-center">Aujourd'hui nous sommes le : <span id="date"></span></div>
-        <div class="heure col-4 text-center">Vous vous êtes connecté à : <span id="heure"></span></div>
+        <div class="heure col-4 text-end">Vous vous êtes connecté à : <span id="heure"></span></div>
     </header>
     <div class="bgImg text-light text-center">
-        <div class="row bg-dark p-3">
-            <div class="col-4">
+        <div class="row p-3">
+            <div class="col-4 cat">
                 <button class="col-4 off menuBurger" id="menuBurger">Menu</button>
-                <button id="menuHome" class="menu"><a href="accueil.html">Retour à l'accueil</a></button>
-                <button id="menuCat1" class="menu"><a href="cat1.html">Discussion générale</a></button>
-                <button id="menuCat2" class="menu"><a href="cat2.html">Évènements</a></button>
-                <button id="menuCat3" class="menu"><a href="cat3.html">Le marché</a></button>
+                <button id="menuHome" class="menu button-52"><a href="accueil.html">Retour à l'accueil</a></button>
+                <button id="menuCat1" class="menu button-52"><a href="cat1.html">Discussion générale</a></button>
+                <button id="menuCat2" class="menu button-52"><a href="cat2.html">Évènements</a></button>
             </div>
             <h1 class="text-center text-light col-4">Airsoft Forum</h1>
+            <div class="col-4" id="logOut"><button class=" button-52"><a href="../index.html">Se déconnecter</a></button></div>
         </div>
         <div id="local">Le marché</div>
         <img src="../images/Wolf section-81.jpg" alt="image d'accueil" class="rounded m-5">
@@ -56,15 +56,15 @@
                             illum optio natus architecto maxime voluptates aut nam deserunt quos maiores? Dolorum minus
                             quia,
                             sunt tenetur laboriosam quas tempore vero porro?</td>
-                        <td colspan="2"><button id="btnVoir"><a href="sujet.html">Voir la discussion</a></button></td>
-                    </tr>
+                            <td colspan="2"><button id="btnVoir"><a href="sujet.html" class="text-black">Voir la discussion</a></button></td>
+                        </tr>
                 </tbody>
             </table>
         </div>
         <div id="formTopic" class="justify-content-center row">
             <form action="" method="get" id="ajoutTopic"
                 class="d-flex flex-column mx-5 border border-white rounded col-6">
-                <div class="row mx-5">
+                <div class="row mx-5 cat">
                     <label for="topic" class="mt-3">Titre du sujet</label>
                     <input type="text" class=" mt-3 rounded" id="topic" name="topic" autocomplete="off"
                         placeholder="Donner un titre à votre sujet"><br>
@@ -83,7 +83,7 @@
 
 
     <footer>
-        <div class="text-center text-light"> Copyrights photos : <a href="https://www.framedcyprian.com/" id="cyprian">@FramedCyprian</a></div>
+        <div class="text-center text-light bg-dark mt-5 p-1"> Copyrights photos : <a href="https://www.framedcyprian.com/" id="cyprian">@FramedCyprian</a></div>
     </footer>
 
     <script src="../javascript/cat3.js"></script>

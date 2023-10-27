@@ -13,26 +13,24 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-
-}
-.bgImg {
-    width : 100%;
     background-position-x: center;
-    background-image: url(../images/Wolf\ section-7.jpg);
-    background-size: contain;
+    background-image: url(../images/Wolf\ section-7-blur.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
+}
+footer {
+    margin-top: auto;
 }
 
 .container {
     background-color: #fff;
-    opacity: 80%;
+    opacity: 60%;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -97,8 +95,9 @@ body {
 }
 
 .btn:hover {
-    background: #2cc085;
+    background: #000;
     cursor: pointer;
+    color : #fff;
 }
 
 .btn:focus {

@@ -3,6 +3,7 @@ const prenomEl = document.getElementById("prenom");
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
 const confirmPasswordEl = document.querySelector('#confirm-password');
+const pseudo = document.getElementById("pseudo");
 
 const form = document.querySelector('#signup');
 
@@ -23,7 +24,7 @@ const isPasswordSecure = (password) => {
 };
 
 const noDigit = (username) => {
-    let re = /^([a-zA-Z]){3,}$/i;
+    let re = /^([a-zA-Zéè]){3,}$/i;
     return re.test(username);
 };
 
@@ -156,6 +157,7 @@ form.addEventListener('submit', function (e) {
         localStorage.setItem("mdp",passwordEl.value);
         localStorage.setItem("username",usernameEl.value);
         localStorage.setItem("prenom", prenomEl.value);
+        localStorage.setItem("pseudo", pseudo.value)
         window.location.href="login.html";
     }
 });
