@@ -1,4 +1,5 @@
 let usernameEl = localStorage.getItem("username");
+let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
 let username = document.getElementById("username");
 
@@ -6,7 +7,7 @@ let date = document.getElementById("date");
 let heure = document.getElementById("heure");
 let day = new Date();
 
-username.innerHTML = prenom + " " + usernameEl;
+username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
 heure.innerHTML = day.toLocaleTimeString();
 
@@ -54,7 +55,8 @@ ajoutTopic.addEventListener("submit", function (e) {
     addMess.setAttribute("id", numMess);
     tdVoir.setAttribute("colspan", "2");
     aVoir.setAttribute("href", "sujet.html");
-    autTd.innerText = localStorage.getItem("prenom");
+    aVoir.setAttribute("class", "text-black");
+    autTd.innerText = localStorage.getItem("pseudo");
     dateTd.innerText = day.toLocaleDateString()+" à "+ day.toLocaleTimeString();
     let voirPlus = titreTd;
     numTopic++;
@@ -105,3 +107,18 @@ btnVoir.addEventListener("click", function(e) {
         localStorage.setItem("heureTopic", heureTopic);
         localStorage.setItem("section", section);
 })
+
+//bouton logout
+let logOut = document.getElementById("logOut");
+logOut.addEventListener("click", function (e) {
+    alert("Vous vous êtes déconnecté");
+    localStorage.removeItem("protec");
+});
+
+
+window.onload = (e) => {
+    if (localStorage.getItem("protec") == null) {
+        alert("Vous devez être connecté pour accéder à cette page");
+        window.location.href="login.html";
+    }
+}

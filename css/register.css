@@ -20,19 +20,18 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-image: url(../images/Wolf\ section-6-blur.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
-.bgImg {
-    width : 85%;
-    background-position-x: center;
-    background-image: url(../images/Wolf\ section-6.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+footer {
+    margin-top: auto;
 }
 
 .container {
     background-color: #fff;
-    opacity: 80%;
+    opacity: 60%;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -88,7 +87,6 @@ body {
 
 /* button */
 .btn {
-    width: 100%;
     padding: 3%;
     border-top-style: none;
     border-right-style: none;
@@ -97,8 +95,9 @@ body {
 }
 
 .btn:hover {
-    background: #2cc085;
+    background: #000;
     cursor: pointer;
+    color : #FFF;
 }
 
 .btn:focus {

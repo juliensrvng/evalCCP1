@@ -50,7 +50,7 @@ const checkEmail = () => {
     let valid = false;
     const email = emailEl.value.trim();
     if (!isRequired(email)) {
-        showError(emailEl, 'le champ ne peut être vide');
+        showError(emailEl, 'Le champ ne peut être vide');
     } else if (!isEmailValid(email)) {
         showError(emailEl, "L'adresse mail n'est pas valide")
     } else {
@@ -65,7 +65,7 @@ const checkPassword = () => {
     let valid = false;
     const password = passwordEl.value.trim();
     if (!isRequired(password)) {
-        showError(passwordEl, 'le mot de passe ne peut être vide');
+        showError(passwordEl, 'Le mot de passe ne peut être vide');
     } else {
         showSuccess(passwordEl);
         valid = true;
@@ -81,12 +81,12 @@ form.addEventListener('submit', function (e) {
     let y = passwordEl.value;
     let a = localStorage.getItem("identifiant");
     let b = localStorage.getItem("mdp");
-        //validation des champs 
-        let isEmailValid = checkEmail();
-        let isPasswordValid = checkPassword();
-        let isFormValid = 
-            isEmailValid &&
-            isPasswordValid ;
+    //validation des champs 
+    let isEmailValid = checkEmail();
+    let isPasswordValid = checkPassword();
+    let isFormValid = 
+        isEmailValid &&
+        isPasswordValid ;
 
     // Soumettre le formulaire
     if (isFormValid == false) {
@@ -101,8 +101,9 @@ form.addEventListener('submit', function (e) {
         alert("L'envoie a échoué")
         showError(passwordEl, "Le mot de passe ne correspond pas à l'identifiant")    
     } else if (x == a && y == b)    {
-        alert("Bravo l'envoie du formulaire a été effectué");
+        alert("Vous êtes désormais connecté !");
         window.location.href="accueil.html";
+        localStorage.setItem("protec",emailEl.value);
     }
 
 });
