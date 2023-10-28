@@ -14,59 +14,67 @@
 
 <body>
     <div class="container m-5">
-        <form id="signup" class="form rounded">
-            <h1>Inscription</h1>
-            <div class="form-field error success">
-                <label for="username">Nom : </label>
-                <input type="text" name="username" id="username" autocomplete="off">
-                <small></small>
+        <form id="signup" class="form rounded row">
+            <h1>Formulaire d'inscription</h1>
+            <div class="firstCol col-6">
+                <div class="form-field error success">
+                    <label for="username">Nom : </label>
+                    <input type="text" name="username" id="username" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="prenom">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="pseudo">Pseudonyme :</label>
+                    <input type="text" name="pseudo" id="pseudo" autocomplete="off">
+                    <span>(seul votre pseudo sera visible par les autres membres)</span>
+                    <small></small>
+                </div>
             </div>
-            <div class="form-field error success">
-                <label for="prenom">Prénom : </label>
-                <input type="text" name="prenom" id="prenom" autocomplete="off">
-                <small></small>
+            <div class="secondCol col-6">
+                <div class="form-field error success">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="form-field error success">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" autocomplete="off">
+                    <button id="showMdp" class="p-2">Afficher le mot de passe</button>
+                    <button id="hideMdp" class="p-2 off">Cacher le mot de passe</button><small></small>
+                    <p class="conditionMdp">Le mot de passe doit avoir au moins 8 caractères, il doit comporter une
+                        minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants : #+-^[]</p>
+                    
+                </div>
+                <div class="form-field error success mb-3">
+                    <label for="confirm-password">Confirmation du mot de passe</label>
+                    <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                    <button id="showMdp2" class="p-2">Afficher le mot de passe</button>
+                    <button id="hideMdp2" class="p-2 off">Cacher le mot de passe</button>
+                    <small></small>
+                </div>
             </div>
-            <div class="form-field error success">
-                <label for="pseudo">Pseudonyme : </label>
-                <input type="text" name="pseudo" id="pseudo" autocomplete="off">
-                <small></small>
-            </div>
-            <div class="form-field error success">
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" autocomplete="off">
-                <small></small>
-            </div>
-            <div class="form-field error success">
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" autocomplete="off">
-                <button id="showMdp">Afficher le mot de passe</button>
-                <button id="hideMdp" class="off">Cacher le mot de passe</button><br>
-                <small class="conditionMdp">Le mot de passe doit avoir au moins 8 caractères, il doit comporter une
-                    minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants : #+-^[]</small>
-                <small></small>
-            </div>
-            <div class="form-field error success">
-                <label for="confirm-password">Confirmation du mot de passe</label>
-                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
-                <button id="showMdp2">Afficher le mot de passe</button>
-                <button id="hideMdp2" class="off">Cacher le mot de passe</button>
-                <small></small>
-            </div>
-            <div class="form-field error success">
-                <input type="submit" value="S'inscrire" class="btn">
-            </div>
-            <div class="form-field error success">
-                <input type="reset" value="Effacer les champs" class="btn">
-            </div>
-            <div class="">
-                <a href="login.html">Je suis déjà inscrit</a>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="form-field error success">
+                    <input type="submit" value="S'inscrire" class="btn">
+                </div>
+                <div class="form-field error success">
+                    <input type="reset" value="Effacer les champs" class="btn">
+                </div>
+                <div class="">
+                    <a href="login.html">Je suis déjà inscrit</a>
+                </div>
             </div>
         </form>
     </div>
 
     <footer>
-        <div class="text-center text-light bg-black mt-5 p-1"> Copyrights photos : <a href="https://www.framedcyprian.com/"
-                id="cyprian">@FramedCyprian</a></div>
+        <div class="text-center text-light bg-black mt-5 p-1"> Copyrights photos : <a
+                href="https://www.framedcyprian.com/" id="cyprian">@FramedCyprian</a></div>
     </footer>
 
 

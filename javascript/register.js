@@ -3,7 +3,7 @@ const prenomEl = document.getElementById("prenom");
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
 const confirmPasswordEl = document.querySelector('#confirm-password');
-const pseudo = document.getElementById("pseudo");
+const pseudoEl = document.getElementById("pseudo");
 
 const form = document.querySelector('#signup');
 
@@ -28,18 +28,19 @@ const noDigit = (username) => {
     return re.test(username);
 };
 
+//fonction afficher/cacher mdp
 let showMdp = document.getElementById("showMdp");
 let hideMdp = document.getElementById("hideMdp");
 let mdp = document.getElementById("password");
 
-showMdp.addEventListener("click", function (e) {
+showMdp.addEventListener("mousedown", function (e) {
     e.preventDefault();
     mdp.setAttribute("type", "text");
     showMdp.classList.toggle("off");
     hideMdp.classList.toggle("off");
 });
 
-hideMdp.addEventListener("click", function (e) {
+hideMdp.addEventListener("mousedown", function (e) {
     e.preventDefault();
     mdp.setAttribute("type", "password");
     showMdp.classList.toggle("off");
@@ -124,11 +125,27 @@ const checkPrenom = () => {
     return valid;
 }
 
+const checkPseudo = () => {
+    let valid = false;
+
+    const pseudo = pseudoEl.value.trim();
+
+    if (!isRequired(pseudo)) {
+        showError(pseudoEl, 'Le champ ne peut être vide');
+    } else if (!noDigit(pseudo)) {
+        showError(pseudoEl, `Le prénom ne doit pas contenir de chiffre.`)
+    } else {
+        showSuccess(pseudoEl);
+        valid = true;
+    }
+    return valid;
+}
+
 const checkEmail = () => {
     let valid = false;
     const email = emailEl.value.trim();
     if (!isRequired(email)) {
-        showError(emailEl, 'le champ ne peut être vide');
+        showError(emailEl, 'Le champ ne peut être vide');
     } else if (!isEmailValid(email)) {
         showError(emailEl, "L'adresse mail ne peut être valide")
     } else {
@@ -143,9 +160,9 @@ const checkPassword = () => {
     let valid = false;
     const password = passwordEl.value.trim();
     if (!isRequired(password)) {
-        showError(passwordEl, 'le mot de passe ne peut être vide');
+        showError(passwordEl, 'Le mot de passe ne peut être vide');
     } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Le mot de passe doit avoir au moins 8 caractères, il doit comporter une minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants #+-^[]');
+        showError(passwordEl, 'Le mot de passe ne remplit pas les conditions ci-dessous');
     } else {
         showSuccess(passwordEl);
         valid = true;
@@ -160,7 +177,7 @@ const checkConfirmPassword = () => {
     if (!isRequired(confirmPassword)) {
         showError(confirmPasswordEl, 'Entrez votre mot de passe');
     } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, "Votre mot de passe et la confirmation n'est pas bonne");
+        showError(confirmPasswordEl, "Votre mot de passe et la confirmation ne sont pas identiques");
     } else {
         showSuccess(confirmPasswordEl); valid = true;
     } return valid;
@@ -176,9 +193,11 @@ form.addEventListener('submit', function (e) {
     let isPasswordValid = checkPassword();
     let isConfirmPasswordValid = checkConfirmPassword();
     let isPrenomValid = checkPrenom();
+    let isPseudoValid = checkPseudo();
     let isFormValid = 
         isUsernameValid &&
         isPrenomValid &&
+        isPseudoValid &&
         isEmailValid &&
         isPasswordValid &&
         isConfirmPasswordValid;
@@ -192,7 +211,7 @@ form.addEventListener('submit', function (e) {
         localStorage.setItem("mdp",passwordEl.value);
         localStorage.setItem("username",usernameEl.value);
         localStorage.setItem("prenom", prenomEl.value);
-        localStorage.setItem("pseudo", pseudo.value)
+        localStorage.setItem("pseudo", pseudoEl.value)
         window.location.href="login.html";
     }
 });
