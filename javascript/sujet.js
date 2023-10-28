@@ -1,3 +1,5 @@
+//bandeau
+
 let usernameEl = localStorage.getItem("username");
 let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
@@ -32,28 +34,26 @@ ajoutTopic.addEventListener("submit", function (e) {
     let tbodyTopic = document.getElementById("tbodyTopic");
     let tr = document.createElement("tr");
     tbodyTopic.appendChild(tr);
-    // let blankTd = document.createElement("td");
-    // tr.appendChild(blankTd);
-    // let blankTd2 = document.createElement("td");
-    // tr.appendChild(blankTd2);
+    tr.setAttribute("class", "bg-secondary-subtle text-black")
     let heureComm = document.createElement("td");
     tr.appendChild(heureComm);
-    heureComm.setAttribute("colspan", "3");
+    heureComm.setAttribute("colspan", "4");
     let day = new Date ();
     heureComm.innerText = "répondu le "+day.toLocaleDateString()+" à "+day.toLocaleTimeString() ;
     let auteurComm = document.createElement("td");
     tr.appendChild(auteurComm);
-    auteurComm.innerText = localStorage.getItem("pseudo");
     //TR commentaire
     let answerTr = document.createElement("tr");
     tbodyTopic.appendChild(answerTr);
-    // let td = document.createElement("td");
-    // answerTr.appendChild(td);
+    answerTr.setAttribute("class", "bg-secondary")
+    let td = document.createElement("td");
+    answerTr.appendChild(td);
+    td.innerText = localStorage.getItem("pseudo");
     let answerMess = document.createElement("td");
     answerTr.appendChild(answerMess);
     let messageTd = document.getElementById("messageTd").value;
     answerMess.innerText = messageTd;
-    answerMess.setAttribute("colspan", "3");
+    answerMess.setAttribute("colspan", "2");
     answerMess.setAttribute("class", "text-end")
     //remove btn
     let answerTdBtn = document.createElement("td");
@@ -89,7 +89,7 @@ logOut.addEventListener("click", function (e) {
     localStorage.removeItem("protec");
 });
 
-
+//verif connexion
 window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
