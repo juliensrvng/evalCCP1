@@ -36,7 +36,7 @@ footer {
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 400px;    
+
 
 }
 
@@ -54,7 +54,7 @@ footer {
     margin-bottom: 5px;
 }
 
-.form-field label {
+.form-field label, span {
     display: block;
     color: #777;
     margin-bottom: 5px;
