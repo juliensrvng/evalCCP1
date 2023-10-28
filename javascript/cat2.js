@@ -1,3 +1,4 @@
+//bandeau
 let usernameEl = localStorage.getItem("username");
 let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
@@ -11,6 +12,7 @@ username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
 heure.innerHTML = day.toLocaleTimeString();
 
+//ajout sujet
 let ajoutTopic = document.getElementById("ajoutTopic");
 let x = 2;
 let numTopic = 0;
@@ -62,6 +64,7 @@ ajoutTopic.addEventListener("submit", function (e) {
     aVoir.setAttribute("class", "text-black");
     autTd.innerText = localStorage.getItem("pseudo");
     dateTd.innerText = day.toLocaleDateString()+" à "+ day.toLocaleTimeString();
+    //bouton voir discussion
     let voirPlus = titreTd;
     numTopic++;
     numMess++;
@@ -101,6 +104,7 @@ voirPlus.addEventListener("click", function (e) {
     message.classList.toggle("off");
 });
 
+//bouton voir discussion
 let btnVoir = document.getElementById("btnVoir");
 btnVoir.addEventListener("click", function(e) {
         let voir = sujet.innerText;
@@ -120,7 +124,7 @@ logOut.addEventListener("click", function (e) {
     localStorage.removeItem("protec");
 });
 
-
+//verif connexion
 window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
@@ -128,6 +132,8 @@ window.onload = (e) => {
     }
 };
 
+
+//menu responsive
 let menuBurger = document.getElementById("menuBurger");
 
 menuBurger.addEventListener("click", function(e) {

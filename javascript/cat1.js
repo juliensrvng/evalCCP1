@@ -1,3 +1,5 @@
+//bandeau
+
 let usernameEl = localStorage.getItem("username");
 let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
@@ -16,6 +18,7 @@ let x = 2;
 let numTopic = 0;
 let numMess = 1000;
 
+//ajout sujet
 ajoutTopic.addEventListener("submit", function (e) {
     let topic = document.getElementById("topic").value;
     let messageTd = document.getElementById("messageTd").value;
@@ -63,6 +66,7 @@ ajoutTopic.addEventListener("submit", function (e) {
     aVoir.setAttribute("class", "text-black");
     autTd.innerText = localStorage.getItem("pseudo");
     dateTd.innerText = day.toLocaleDateString()+" à "+ day.toLocaleTimeString();
+    //bouton voir le message du sujet
     let voirPlus = titreTd;
     numTopic++;
     numMess++;
@@ -79,7 +83,7 @@ ajoutTopic.addEventListener("submit", function (e) {
         localStorage.setItem("heureTopic", heureTopic);
         localStorage.setItem("section", section);
     })
-    //bouton remove
+    //bouton remove sujet
     let remove = document.createElement("button");
     let tdBtn = document.createElement("td");
     addTopic.appendChild(tdBtn);
@@ -102,6 +106,7 @@ voirPlus.addEventListener("click", function (e) {
     message.classList.toggle("off");
 });
 
+//bouton voir discussion 
 let btnVoir = document.getElementById("btnVoir");
 btnVoir.addEventListener("click", function(e) {
         let voir = sujet.innerText;
@@ -121,7 +126,7 @@ logOut.addEventListener("click", function (e) {
     localStorage.removeItem("protec");
 });
 
-
+//vérif connexion
 window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
@@ -129,6 +134,7 @@ window.onload = (e) => {
     }
 };
 
+//menu responsive
 let menuBurger = document.getElementById("menuBurger");
 
 menuBurger.addEventListener("click", function(e) {

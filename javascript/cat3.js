@@ -101,6 +101,7 @@ voirPlus.addEventListener("click", function (e) {
     message.classList.toggle("off");
 });
 
+//bouton voir discussion
 let btnVoir = document.getElementById("btnVoir");
 btnVoir.addEventListener("click", function(e) {
         let voir = sujet.innerText;
@@ -120,7 +121,7 @@ logOut.addEventListener("click", function (e) {
     localStorage.removeItem("protec");
 });
 
-
+//verif connexion
 window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
@@ -128,6 +129,7 @@ window.onload = (e) => {
     }
 };
 
+//menu responsive
 let menuBurger = document.getElementById("menuBurger");
 
 menuBurger.addEventListener("click", function(e) {

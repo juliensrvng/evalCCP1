@@ -28,9 +28,11 @@
             </div>
             <div class="text-center text-light col-4">
                 <h1>Airsoft Forum</h1>
-            </div>            <div class="col-4" id="logOut"><button class=" button-52"><a href="../index.html">Se déconnecter</a></button></div>
+            </div>
+            <div class="col-4" id="logOut"><button class=" button-52"><a href="../index.html">Se
+                        déconnecter</a></button></div>
         </div>
-        <div id="local">Évènements</div>
+        <div><p id="local" class="bg-black d-inline p-3 rounded">Évènements</p></div>
         <img src="../images/Wolf section-7.jpg" alt="image d'accueil" class="rounded m-5 border border-black">
         <div class="d-flex justify-content-center mb-5">
             <table>
@@ -39,15 +41,15 @@
                         <th>#</th>
                         <th>Sujet</th>
                         <th>Dernier Commentaire</th>
-                        <th>Auteur</th>
+                        <th colspan="2">Auteur</th>
                     </tr>
                 </thead>
-                <tbody id="tbodyTopic">
+                <tbody id="tbodyTopic" class="bg-black">
                     <tr>
                         <td>1</td>
                         <td id="sujet" class="titreLi">Partie le 29/10/2023</td>
                         <td id="heureSujet">24/10/2023 à 10:54:33</td>
-                        <td>Julien</td>
+                        <td colspan="2">Julien</td>
                     </tr>
                     <tr id="message" class="off">
                         <td></td>
@@ -57,8 +59,9 @@
                             illum optio natus architecto maxime voluptates aut nam deserunt quos maiores? Dolorum minus
                             quia,
                             sunt tenetur laboriosam quas tempore vero porro?</td>
-                            <td colspan="2"><button id="btnVoir"><a href="sujet.html" class="text-black">Voir la discussion</a></button></td>
-                        </tr>
+                        <td colspan="2"><button id="btnVoir"><a href="sujet.html" class="text-black">Voir la
+                                    discussion</a></button></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -83,8 +86,8 @@
 
 
     <footer>
-        <div class="text-center text-light bg-black mt-5 p-1"> Copyrights photos : <a href="https://www.framedcyprian.com/"
-                id="cyprian">@FramedCyprian</a></div>
+        <div class="text-center text-light bg-black mt-5 p-1"> Copyrights photos : <a
+                href="https://www.framedcyprian.com/" id="cyprian">@FramedCyprian</a></div>
     </footer>
 
     <script src="../javascript/cat2.js"></script>
