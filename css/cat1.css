@@ -68,6 +68,11 @@ td, th {
 
 th, td {
     text-align: center;
+    width : 30%;
+}
+
+.first {
+    width : 10%;
 }
 
 .off {
@@ -75,7 +80,7 @@ th, td {
 }
 
 table {
-    width: 1000px;
+    width: 75%;
 }
 
 .off {

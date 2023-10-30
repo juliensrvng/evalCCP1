@@ -53,6 +53,8 @@ ajoutTopic.addEventListener("submit", function (e) {
     btnVoir.appendChild(aVoir);
     addMess.innerText = messageTd;
     aVoir.innerText = "Voir la discussion";
+    numTd.setAttribute("class", "first");
+    refTd.setAttribute("class", "first");
     titreTd.setAttribute("id", numTopic);
     titreTd.setAttribute("class", "sujet");
     addMessTd.setAttribute("class", "off");

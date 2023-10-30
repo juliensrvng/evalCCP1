@@ -49,12 +49,13 @@ ajoutTopic.addEventListener("submit", function (e) {
     let td = document.createElement("td");
     answerTr.appendChild(td);
     td.innerText = localStorage.getItem("pseudo");
+    td.setAttribute("class", "first");
     let answerMess = document.createElement("td");
     answerTr.appendChild(answerMess);
     let messageTd = document.getElementById("messageTd").value;
     answerMess.innerText = messageTd;
     answerMess.setAttribute("colspan", "2");
-    answerMess.setAttribute("class", "text-end")
+    answerMess.setAttribute("class", "text-start")
     //remove btn
     let answerTdBtn = document.createElement("td");
     answerTr.appendChild(answerTdBtn)
