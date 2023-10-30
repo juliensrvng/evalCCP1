@@ -3,9 +3,13 @@ body {
     background-image: url(/images/Wolf\ section-6-blur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+header {
+    width : 100%;
 }
 
 footer {
@@ -113,4 +117,8 @@ table {
 }
 #cyprian, #menuBurger {
     color : #FFF
+}
+
+.row {
+    --bs-gutter-x: 0rem;
 }

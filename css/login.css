@@ -23,6 +23,7 @@ body {
     background-image: url(../images/Wolf\ section-7-blur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 footer {
     margin-top: auto;
