@@ -122,6 +122,8 @@ form.addEventListener('submit', function (e) {
         alert("Vous êtes désormais connecté !");
         window.location.href="accueil.html";
         localStorage.setItem("protec",emailEl.value);
+        let day = new Date ();
+        localStorage.setItem("heureCo", day.toLocaleTimeString())
     }
 
 });

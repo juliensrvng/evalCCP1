@@ -10,7 +10,7 @@ let day = new Date();
 
 username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
-heure.innerHTML = day.toLocaleTimeString();
+heure.innerHTML = localStorage.getItem("heureCo");
 
 //ajout sujet
 let ajoutTopic = document.getElementById("ajoutTopic");
