@@ -117,3 +117,13 @@ footer {
 .conditionMdp {
     font-size: x-small;
 }
+
+@media only screen and (max-width : 768px) {
+    .respOff {
+        display : none;
+        width : 100%;
+    }
+    .col-4 {
+        width : 100%;
+    }
+}
