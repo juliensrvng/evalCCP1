@@ -9,7 +9,7 @@ let day = new Date();
 
 username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
-heure.innerHTML = day.toLocaleTimeString();
+heure.innerHTML = localStorage.getItem("heureCo");
 
 //bouton logout
 let logOut = document.getElementById("logOut");
@@ -23,5 +23,6 @@ window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
         window.location.href="login.html";
+        localStorage.setItem("heureCo", day.toLocaleTimeString())
     }
 }
