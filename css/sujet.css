@@ -68,6 +68,11 @@ td, th {
 
 th, td {
     text-align: center;
+    width : 30%;
+}
+
+.first {
+    width : 10%;
 }
 
 .off {

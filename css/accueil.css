@@ -64,3 +64,11 @@ a {
         padding: 13px 50px 13px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .cat {
+        width : 65%;
+        margin-bottom : 5%;
+    }
+    
+}
