@@ -18,9 +18,12 @@ To download this repo, copy [repo's code](https://github.com/juliensrvng/evalCCP
 
 On this website, you'll be able to register or login to the Welcome page.
 
-The register page is a form where you have to put your name, first name, username (which will be use in the forum), your e-mail address, and your password. Name and first name can't be shorter than 3 characters and no digit. The username is free to use
+The register page is a form where you have to put your name, first name, username (which will be use in the forum), your e-mail address, and your password. Name and first name can't be shorter than 3 characters and no digit. The username is free to use but can't be already used by another user. E-mail address must be valid and not already used by another user. Password must contain at least 8 characters including : one uppercase letter, one lowercase letter, a number and one of these special character : "#+-^[]". There's a show/hide password button to see your input.
 
-You'll find a header with a welcome message, the date of the day, and the time you entered the page. The Welcome page gives you possibilities to navigate through 3 categogries and to logout.
+The login page will gives you access to the welcome page with your e-mail address and password you used at the register page.
+
+On the welcome page :
+You'll find a header with a welcome message, the date of the day, and the time you last logged in. The Welcome page gives you possibilities to navigate through 3 categogries and to logout.
 
 On each category, you'll be able to start a new topic or answer to an already existing topic.
 
