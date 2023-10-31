@@ -1,5 +1,4 @@
 //bandeau
-
 let usernameEl = localStorage.getItem("username");
 let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
@@ -13,12 +12,11 @@ username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
 heure.innerHTML = localStorage.getItem("heureCo");
 
+//ajout sujet
 let ajoutTopic = document.getElementById("ajoutTopic");
 let x = 2;
 let numTopic = 0;
 let numMess = 1000;
-
-//ajout sujet
 ajoutTopic.addEventListener("submit", function (e) {
     let topic = document.getElementById("topic").value;
     let messageTd = document.getElementById("messageTd").value;
@@ -149,4 +147,3 @@ menuBurger.addEventListener("click", function(e) {
     let menuCat3 = document.getElementById("menuCat3");
     menuCat3.classList.toggle("on");
 });
-

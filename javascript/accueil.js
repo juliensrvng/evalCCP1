@@ -18,7 +18,7 @@ logOut.addEventListener("click", function (e) {
     localStorage.removeItem("protec");
 });
 
-
+//protection login
 window.onload = (e) => {
     if (localStorage.getItem("protec") == null) {
         alert("Vous devez être connecté pour accéder à cette page");
