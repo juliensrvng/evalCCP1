@@ -1,5 +1,4 @@
-Evaluation CCP1 DWWM
-Projet Forum de discussion
+Evaluation CCP1 DWWM Projet Forum de discussion
 
 - [Introduction](#introduction)
 - [Aim](#aim)
@@ -64,3 +63,7 @@ The new table row createad will only show the topic subject, if you want to know
 ## Topic page
 
 On the topic page, you'll be able to answer to the topic. You'll also be able to delete your answer.
+
+## More info
+
+Log out : if you log out, you won't be able to navigate through pages with even if you have the url to other pages. Each page where you have to be logged in will check if you are logged in or not. If not, the page will redirect you to the index (where you can either register or log in).
