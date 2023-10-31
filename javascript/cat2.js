@@ -134,7 +134,6 @@ window.onload = (e) => {
     }
 };
 
-
 //menu responsive
 let menuBurger = document.getElementById("menuBurger");
 

@@ -1,3 +1,4 @@
+//bandeau
 let usernameEl = localStorage.getItem("username");
 let pseudo = localStorage.getItem("pseudo");
 let prenom = localStorage.getItem("prenom");
@@ -11,6 +12,7 @@ username.innerHTML = prenom +" "+'"'+pseudo+'"'+" "+usernameEl;
 date.innerHTML = day.toLocaleDateString();
 heure.innerHTML = localStorage.getItem("heureCo");
 
+//ajout sujet
 let ajoutTopic = document.getElementById("ajoutTopic");
 let x = 2;
 let numTopic = 0;
@@ -64,6 +66,7 @@ ajoutTopic.addEventListener("submit", function (e) {
     aVoir.setAttribute("class", "text-black");
     autTd.innerText = localStorage.getItem("pseudo");
     dateTd.innerText = day.toLocaleDateString()+" à "+ day.toLocaleTimeString();
+    //bouton voir discussion
     let voirPlus = titreTd;
     numTopic++;
     numMess++;

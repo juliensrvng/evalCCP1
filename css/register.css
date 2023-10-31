@@ -20,12 +20,12 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url(../images/Wolf\ section-6-blur.jpg);
+    background-image: url(../images/Wolf_section-6-blur.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 }
+
 footer {
     margin-top: auto;
     width: 100%;
@@ -37,8 +37,6 @@ footer {
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-
-
 }
 
 .form {
@@ -55,13 +53,14 @@ footer {
     margin-bottom: 5px;
 }
 
-.form-field label, span {
+.form-field label,
+span {
     display: block;
     color: #777;
     margin-bottom: 5px;
 }
 
-.form-field input{
+.form-field input {
     border: solid 2px #f0f0f0;
     border-radius: 3px;
     padding: 10px;
@@ -75,11 +74,11 @@ footer {
     outline: none;
 }
 
-.form-field.error input{
+.form-field.error input {
     border-color: var(--error-color);
 }
 
-.form-field.success input{
+.form-field.success input {
     border-color: var(--success-color);
 }
 
@@ -99,7 +98,7 @@ footer {
 .btn:hover {
     background: #000;
     cursor: pointer;
-    color : #FFF;
+    color: #FFF;
 }
 
 .btn:focus {
@@ -107,11 +106,11 @@ footer {
 }
 
 #cyprian {
-    color : #FFF
+    color: #FFF
 }
 
 .off {
-    display : none;
+    display: none;
 }
 
 .conditionMdp {
@@ -120,10 +119,24 @@ footer {
 
 @media only screen and (max-width : 768px) {
     .respOff {
-        display : none;
-        width : 100%;
+        display: none;
+        width: 100%;
     }
+
     .col-4 {
-        width : 100%;
+        width: 80%;
+    }
+
+    .rowResp {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    .col-6 {
+        width: 100%;
     }
 }
