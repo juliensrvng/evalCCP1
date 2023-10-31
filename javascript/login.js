@@ -6,6 +6,14 @@ const confirmPasswordEl = document.querySelector('#confirm-password');
 
 const form = document.querySelector('#signup');
 
+//déjà connecté
+window.onload = (e) => {
+    if (localStorage.getItem("protec") != null) {
+        alert("Vous vous êtes déjà connecté.\nRetour à la page d'accueil.");
+        window.location.href="accueil.html";
+    }
+};
+
 // constante pour vérifier si le champ est vide ou non 
 const isRequired = value => value === '' ? false : true;
 

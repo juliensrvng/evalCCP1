@@ -16,7 +16,11 @@ Here's the [Figma's link](https://www.figma.com/file/iCkI0YaRPMRXaTaldxz31C/Unti
 To download this repo, copy [repo's code](https://github.com/juliensrvng/evalCCP1.git) and clone it on Visual Studio code with the terminal command :
 "git clone https://github.com/juliensrvng/evalCCP1.git"
 
-On this website, you'll be able to register or login to the Welcome page. You'll find a header with a welcome message, the date of the day, and the time you entered the page. The Welcome page gives you possibilities to navigate through 3 categogries and to logout.
+On this website, you'll be able to register or login to the Welcome page.
+
+The register page is a form where you have to put your name, first name, username (which will be use in the forum), your e-mail address, and your password. Name and first name can't be shorter than 3 characters and no digit. The username is free to use
+
+You'll find a header with a welcome message, the date of the day, and the time you entered the page. The Welcome page gives you possibilities to navigate through 3 categogries and to logout.
 
 On each category, you'll be able to start a new topic or answer to an already existing topic.
 

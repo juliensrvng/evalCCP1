@@ -132,8 +132,8 @@ const checkPseudo = () => {
 
     if (!isRequired(pseudo)) {
         showError(pseudoEl, 'Le champ ne peut être vide');
-    } else if (!noDigit(pseudo)) {
-        showError(pseudoEl, `Le prénom ne doit pas contenir de chiffre.`)
+    } else if (pseudo == localStorage.getItem("pseudo")) {
+        showError(pseudoEl, `Le pseudo est déjà utilisé.`)
     } else {
         showSuccess(pseudoEl);
         valid = true;
@@ -148,6 +148,8 @@ const checkEmail = () => {
         showError(emailEl, 'Le champ ne peut être vide');
     } else if (!isEmailValid(email)) {
         showError(emailEl, "L'adresse mail ne peut être valide")
+    } else if (email == localStorage.getItem("identifiant")) {
+        showError(emailEl, "Cette adresse mail est déjà utilisée");
     } else {
         showSuccess(emailEl);
         valid = true;
